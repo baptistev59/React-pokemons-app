@@ -23,13 +23,13 @@ const App: FunctionComponent = () => {
       </div>
       {/* gestion des routes */}
       <Switch>
-        <PrivateRoute exact path="/" component={PokemonList} />
+        <Route exact path="/" component={PokemonList} />
         <Route exact path="/login" component={Login} />
-        <PrivateRoute exact path="/pokemons" component={PokemonList} />
-        <PrivateRoute exact path="/pokemons/edit/:id" component={PokemonEdit} />
-        <PrivateRoute exact path="/pokemons/add" component={PokemonAdd} />
+        <Route exact path="/pokemons" component={PokemonList} />
+        <Route exact path="/pokemons/edit/:id" component={PokemonEdit} />
+        <Route exact path="/pokemons/add" component={PokemonAdd} />
 
-        <PrivateRoute path="/pokemons/:id" component={PokemonDetail} />
+        <Route path="/pokemons/:id" component={PokemonDetail} />
 
         <Route component={PageNotFound} />
       </Switch>
